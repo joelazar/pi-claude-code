@@ -222,7 +222,7 @@ test("normalizes tool schemas and builds native generation fields", () => {
     context_management: { edits: [] },
   });
   // Opus 5.5 rejects `thinking.type: disabled` (issue #2).
-  for (const id of ["claude-opus-5-5", "default", "claude-fable-5-1"]) {
+  for (const id of ["claude-opus-5-5", "default", "claude-fable-5-2"]) {
     assert.deepEqual(buildExtraBody(id, [], {}), {
       tools: [],
       thinking: { type: "adaptive" },
